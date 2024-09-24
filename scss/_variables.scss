@@ -1,0 +1,36 @@
+// Fonts (Fraunces)
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+// Colors
+$color-bg: hsl(30, 38%, 92%);
+$color-card: #fff;
+$color-card-content: hsl(228, 12%, 48%);
+$color-card-title: #000;
+$color-btn: hsl(158, 36%, 37%);
+$color-btn-hover: hsl(212, 21%, 14%);
+
+// Font Families
+$ff-title: "Fraunces", serif;
+$ff-content: "Montserrat", sans-serif;
+
+// Font Weights
+$fw-medium: 500;
+$fw-bold: 700;
+
+// Font Sizes
+$fs-medium: 0.875rem;
+$fs-large: 2rem;
+
+// Sizes
+$size-card-mobile: 21.4375rem;
+$size-card-desktop: 37.5rem;
+
+// Border Radius
+$border-radius-small: 0.5rem;
+$border-radius-medium: 0.75rem;
+
+// Margin & Padding
+$padding-card-content: 1.5rem;
+
+// Gaps
+$gap-small: 0.75rem;

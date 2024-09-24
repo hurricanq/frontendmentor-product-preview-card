@@ -1,0 +1,92 @@
+@use './reset';
+@use './variables' as *;
+@use './mixins' as *;
+
+body {
+    @include flex-center;
+    background: $color-bg;
+    width: 100%;
+    height: 100vh;   
+}
+
+/* Container */
+.container {
+    max-width: $size-card-mobile;
+    background: $color-card;
+    border-radius: $border-radius-medium;
+    overflow: hidden;
+
+      // Media query for desktop
+	@media (min-width: 48em) { 
+		max-inline-size: $size-card-desktop;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.container__image {
+    // Media query for desktop
+    @media (min-width: 48em) {
+        display: grid;
+        place-items: center;   
+    }
+}
+
+.container__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content */
+.container__content {
+    padding: $padding-card-content;
+    font: {
+        family: $ff-content;
+        weight: $fw-medium;
+        size: $fs-medium;
+    }
+    color: $color-card-content;
+}
+
+.content__category {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.content__title {
+    font: {
+        family: $ff-title;
+        size: $fs-large;
+    }
+    color: $color-card-title;
+    line-height: 1;
+}
+
+.content__desc {
+    line-height: 1.6;
+}
+
+/* Prices */
+.content__price {
+    @include flex-align;
+    gap: $gap-small;
+}
+
+.price--sale {
+    font: {
+        family: $ff-title;
+        size: $fs-large;
+    }
+    color: $color-btn;
+}
+
+.price--original {
+    text-decoration: line-through;
+}
+
+.content__btn {
+    @include card-btn;
+    @include flex-center($gap-small);
+    @include btn-hover;
+}

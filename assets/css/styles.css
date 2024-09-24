@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: hsl(30, 38%, 92%);
+  width: 100%;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 21.4375rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+@media (min-width: 48em) {
+  .container {
+    max-inline-size: 37.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 48em) {
+  .container__image {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.container__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content */
+.container__content {
+  padding: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: hsl(228, 12%, 48%);
+}
+
+.content__category {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.content__title {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: #000;
+  line-height: 1;
+}
+
+.content__desc {
+  line-height: 1.6;
+}
+
+/* Prices */
+.content__price {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.price--sale {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+}
+
+.price--original {
+  text-decoration: line-through;
+}
+
+.content__btn {
+  display: block;
+  width: 100%;
+  padding: 1em 0;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: hsl(158, 36%, 37%);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.content__btn:hover {
+  background: hsl(212, 21%, 14%);
+}
+
+/*# sourceMappingURL=styles.css.map */
